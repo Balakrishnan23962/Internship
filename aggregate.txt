@@ -1,0 +1,4 @@
+db.inventory.aggregate([{$match:{qty:45}}])
+ db.inventory.aggregate([{$match:{qty:45}},{$group:{_id:null,count:{$count:{}}}}])
+db.inventory.aggregate([{$group:{_id:"$item",Totalqty:{$sum:"$qty"}}}])
+ db.inventory.aggregate([{$group:{_id:"$item",Totalqty:{$sum:"$qty"}}}]).explain("executionStats")
