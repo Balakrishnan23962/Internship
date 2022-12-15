@@ -1,0 +1,12 @@
+show dbs;
+ use day1;
+show collections;
+var emp= [ { id:1,name:'manager'},{id:2,name:'GM'}]
+db.myemp.insert(emp);
+ db.myemp.find();
+ var emp1= [ { id:3,name:'manager'},{id:4,name:'SM'}]
+db.myemp.insert(emp1);
+db.myemp.update({name:'manager'},{$set:{'name':'GM'}},{multi:true});
+db.student1.find().sort({rollno:1});
+db.student1.find().limit(2);
+ db.student.find({"course.duration":"2 Years"});
