@@ -1,0 +1,8 @@
+use day1;
+ db.createCollection("student");
+db.student.insert({rollno:2104020,name:"Bala",course:{coursename:"MCA",duration:"2 Years"},address:{city:"Tiruppur",state:"TN",country:"IN"}});
+db.student.insert({rollno:2104021,name:"Bharath",course:{coursename:"MCA",duration:"2 Years"},address:{city:"Tiruppur",state:"TN",country:"IN"}});
+db.student.insert({rollno:2104022,name:"Guna",course:{coursename:"CS",duration:"3 Years"},address:{city:"Tiruppur",state:"TN",country:"IN"}});
+db.student.insert({rollno:2104025,name:"Surya",course:{coursename:"CS",duration:"3 Years"},address:{city:"Tiruppur",state:"TN",country:"IN"}});
+ db.student.find({"course.duration":"2 Years"});
+db.student.find();
